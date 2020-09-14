@@ -1,7 +1,29 @@
 {
-  "name": "root",
+  "name": "@uxland/components",
+  "description": "UXLand Libraries",
+  "author": "UXLand <dev@uxland.es>",
+  "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/components/issues"
+  },
+  "homepage": "https://github.com/uxland/components#readme",
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
+    "@uxland/project-tools": "^1.0.0-alpha.8",
+    "husky": "^4.3.0",
     "lerna": "^3.22.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged -c node_modules/@uxland/project-tools/lint/lint-staged.config.js",
+      "commit-msg": "commitlint --config node_modules/@uxland/project-tools/lint/commitlint.config.js -E HUSKY_GIT_PARAMS"
+    }
   }
 }
