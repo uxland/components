@@ -1,5 +1,6 @@
-import { html, TemplateResult } from "lit-html";
+import { html, svg, TemplateResult } from "lit-html";
 import { CoreConfig } from "@uxland/ui-core";
+import { unsafeSVG } from "lit-html/directives/unsafe-svg";
 
 import "elix/define/Button";
 import {
@@ -17,9 +18,11 @@ import styles from "./styles.scss";
 
 export interface ButtonConfig extends CoreConfig {
   label: string;
-  raised: boolean;
-  disabled: boolean;
-  outlined: boolean;
+  icon?: string;
+  raised?: boolean;
+  disabled?: boolean;
+  outlined?: boolean;
+  onClick?: () => void;
 }
 
 // export default class UxlButton extends ElixButton {}
@@ -32,8 +35,11 @@ export default class UxlButton extends LitElement {
     // this.addEventListener('click', this.handleClick.bind(this));
   }
 
-  @property({ type: String, reflect: true })
+  @property({ type: String })
   label: string;
+
+  @property({ type: String })
+  icon: string;
 
   @property({ type: Boolean, reflect: true })
   disabled: boolean;
@@ -41,23 +47,17 @@ export default class UxlButton extends LitElement {
   @property({ type: Boolean, reflect: true })
   raised: boolean;
 
-  /**
-   * `outlined` is an exclusive property, meaning that it cannot be combined with `raised`
-   */
   @property({ type: Boolean, reflect: true })
   outlined: boolean;
 
   elixButton: HTMLElement;
 
   attributeChangedCallback(name: string, oldVal: any, newVal: any) {
-    console.log(name);
     if (!this.elixButton)
       this.elixButton = this.shadowRoot.querySelector("elix-button");
-    if (name != "label") {
-      if (newVal != null && newVal != false)
-        this.elixButton?.setAttribute(name, newVal);
-      else this.elixButton?.removeAttribute(name);
-    }
+    if (newVal != null || newVal != undefined)
+      this.elixButton?.setAttribute(name, newVal);
+    else this.elixButton?.removeAttribute(name);
     super.attributeChangedCallback(name, oldVal, newVal);
   }
 
@@ -68,7 +68,9 @@ export default class UxlButton extends LitElement {
       ?raised="${this.raised}"
       ?outlined="${this.outlined}"
     >
-      ${this.label}
+      ${this.icon && this.icon != "undefined"
+        ? html`${unsafeSVG(this.icon)}<span>${this.label}</span>`
+        : html`${this.label}`}
     </elix-button>`;
   }
 
@@ -78,39 +80,3 @@ export default class UxlButton extends LitElement {
     `;
   }
 }
-// //@ts-ignore
-// @customElement('uxl-button')
-// export default class Button extends ElixButton {
-//   constructor() {
-//     super();
-//   }
-
-//   @property()
-//   label: string;
-
-//   @property()
-//   onClick: () => void;
-
-//   @property()
-//   disabled: boolean;
-
-//   @property()
-//   raised: boolean;
-
-//   // render(): TemplateResult {
-//   //   return html`<elix-button
-//   //     class="custom-btn"
-//   //     @click="${this.onClick}"
-//   //     ?raised=${this.raised}
-//   //     ?disabled="${this.disabled}"
-//   //   >
-//   //     ${this.label}
-//   //   </elix-button>`;
-//   // }
-
-//   // static get styles(): CSSResult {
-//   //   return css`
-//   //     ${unsafeCSS(styles)}
-//   //   `;
-//   // }
-// }

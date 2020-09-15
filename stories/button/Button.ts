@@ -19,21 +19,22 @@
 // //   `;
 // // };
 
-// import '@uxland/ui-button';
-// import { html } from 'lit-html';
-// import './button.css';
-// import PropTypes from 'prop-types';
+import "@uxland/ui-button";
+import { ButtonConfig } from "@uxland/ui-button";
+import { html } from "lit-html";
+import "./button.css";
 
-// const customClick = () => ({
-//   action: 'onClick',
-// });
+const customClick = () => ({
+  action: "onClick",
+});
 
-// export const Button = ({ label, disabled, raised, outlined, onClick }) =>
-//   html`<uxl-button
-//     @click="${onClick}"
-//     ?disabled=${disabled}
-//     ?raised=${raised}
-//     ?outlined=${outlined}
-//     label=${label}
-//   ></uxl-button>`;
-// export default Button;
+export const Button = (config: ButtonConfig) =>
+  html`<uxl-button
+    @click="${config.onClick}"
+    ?disabled=${config.disabled}
+    ?raised=${config.raised}
+    ?outlined=${config.outlined}
+    label=${config.label}
+    icon=${config.icon}
+  ></uxl-button>`;
+export default Button;

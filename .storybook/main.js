@@ -27,20 +27,20 @@ module.exports = {
             sourceMap: true,
           },
         },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: true,
-            postcssOptions: {
-              plugins: (loader) => [
-                require('precss'),
-                require('postcss-cssnext'),
-                require('postcss-import'),
-                require('postcss-mixins'),
-              ],
-            },
-          },
-        },
+        // {
+        //   loader: 'postcss-loader',
+        //   options: {
+        //     sourceMap: true,
+        //     postcssOptions: {
+        //       plugins: (loader) => [
+        //         require('precss'),
+        //         require('postcss-cssnext'),
+        //         require('postcss-import'),
+        //         require('postcss-mixins'),
+        //       ],
+        //     },
+        //   },
+        // },
         {
           loader: 'sass-loader',
           options: {

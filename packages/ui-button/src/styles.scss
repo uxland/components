@@ -17,6 +17,10 @@ elix-button {
     background: var(--uxl-button-background-color);
   }
 
+  span {
+    margin-left: 8px;
+  }
+
   &[disabled]::part(inner) {
     opacity: 0.38;
     pointer-events: none;
@@ -34,4 +38,8 @@ elix-button {
     padding-left: 16px;
     padding-right: 16px;
   }
+
+  // &:not([disabled]):hover::part(inner) {
+  //   background-color: green;
+  // }
 }
