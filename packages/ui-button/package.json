@@ -1,0 +1,32 @@
+{
+  "name": "@uxland/ui-button",
+  "version": "0.0.0",
+  "description": "Button Component",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-button#readme",
+  "license": "ISC",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/components/issues"
+  },
+  "dependencies": {
+    "@uxland/ui-core": "^0.0.0",
+    "@uxland/ui-theme": "^0.0.0",
+    "@uxland/uxl-utilities": "^3.5.3",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "elix": "^14.1.0",
+    "lit-element": "^2.4.0"
+  }
+}
