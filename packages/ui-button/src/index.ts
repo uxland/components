@@ -1,56 +1,76 @@
-import { html, svg, TemplateResult } from "lit-html";
 import { CoreConfig } from "@uxland/ui-core";
-import { unsafeSVG } from "lit-html/directives/unsafe-svg";
-
 import "elix/define/Button";
 import {
   css,
   CSSResult,
   customElement,
-  eventOptions,
   LitElement,
   property,
-  PropertyValues,
-  query,
   unsafeCSS,
 } from "lit-element";
+import { html, TemplateResult } from "lit-html";
+import { unsafeSVG } from "lit-html/directives/unsafe-svg";
 import styles from "./styles.scss";
 
 export interface ButtonConfig extends CoreConfig {
   label: string;
   icon?: string;
+  active?: boolean;
   raised?: boolean;
   disabled?: boolean;
   outlined?: boolean;
-  onClick?: () => void;
 }
 
-// export default class UxlButton extends ElixButton {}
-// customElements.define('uxl-button', UxlButton);
-
+/**
+ * Button component
+ * @fires active-changed - Fires whenever active property changes
+ * @fires disabled-changed - Fires whenever disabled property changes
+ * @cssprop --uxl-button-background-color - Button background color
+ * @cssprop --uxl-button-border-color - Button border color
+ */
 @customElement("uxl-button")
 export default class UxlButton extends LitElement {
   constructor() {
     super();
-    // this.addEventListener('click', this.handleClick.bind(this));
   }
 
+  /**
+   * Button text content
+   */
   @property({ type: String })
   label: string;
 
+  /**
+   * Button icon content
+   */
   @property({ type: String })
   icon: string;
 
+  /**
+   * If true, the button is a toggle and is currently in the active state.
+   */
+  @property({ type: Boolean, reflect: true })
+  active: boolean;
+
+  /**
+   * Disables button interactions
+   */
   @property({ type: Boolean, reflect: true })
   disabled: boolean;
 
+  /**
+   * Applies button elevation and shadow styling
+   */
   @property({ type: Boolean, reflect: true })
   raised: boolean;
 
+  /**
+   * Outlines button with defined border
+   */
   @property({ type: Boolean, reflect: true })
   outlined: boolean;
 
-  elixButton: HTMLElement;
+  private elixButton: HTMLElement;
 
   attributeChangedCallback(name: string, oldVal: any, newVal: any) {
     if (!this.elixButton)
@@ -58,12 +78,20 @@ export default class UxlButton extends LitElement {
     if (newVal != null || newVal != undefined)
       this.elixButton?.setAttribute(name, newVal);
     else this.elixButton?.removeAttribute(name);
+    if (name == "active" || name == "disabled")
+      this.dispatchEvent(
+        new CustomEvent(`${name}-changed`, {
+          detail: { [name]: newVal == "" ? true : false },
+        })
+      );
+
     super.attributeChangedCallback(name, oldVal, newVal);
   }
 
   render(): TemplateResult {
     return html`<elix-button
       id="elix-button"
+      ?active="${this.active}"
       ?disabled="${this.disabled}"
       ?raised="${this.raised}"
       ?outlined="${this.outlined}"

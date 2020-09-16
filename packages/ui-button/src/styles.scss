@@ -1,8 +1,9 @@
 @import '@uxland/ui-theme/theme';
 
 :host {
-  --uxl-button-background-color: $uxl-base-color;
-  --uxl-button-border-color: $uxl-base-color;
+  --uxl-button-background-color: #{$uxl-base-color};
+  --uxl-button-text-color: white;
+  --uxl-button-border-color: #{$uxl-base-color};
 }
 
 elix-button {
@@ -14,7 +15,8 @@ elix-button {
     border-radius: 4px;
     cursor: pointer;
     text-transform: uppercase;
-    background: var(--uxl-button-background-color);
+    background-color: var(--uxl-button-background-color);
+    color: var(--uxl-button-text-color);
   }
 
   span {
@@ -32,9 +34,15 @@ elix-button {
     padding-right: 16px;
   }
 
+  &[active]::part(inner) {
+    box-shadow: $shadow-elevation-4dp;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   &[outlined]::part(inner) {
     box-shadow: $shadow-none;
-    border: 1px solid;
+    border: 1px solid var(--uxl-button-border-color);
     padding-left: 16px;
     padding-right: 16px;
   }

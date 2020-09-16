@@ -1,0 +1,100 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "uxl-button",
+      "path": "./packages/ui-button/src/index.ts",
+      "description": "Button component",
+      "attributes": [
+        {
+          "name": "label",
+          "description": "Button text content",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "description": "Button icon content",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "description": "If true, the button is a toggle and is currently in the active state.",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "description": "Disables button interactions",
+          "type": "boolean"
+        },
+        {
+          "name": "raised",
+          "description": "Applies button elevation and shadow styling",
+          "type": "boolean"
+        },
+        {
+          "name": "outlined",
+          "description": "Outlines button with defined border",
+          "type": "boolean"
+        }
+      ],
+      "properties": [
+        {
+          "name": "label",
+          "attribute": "label",
+          "description": "Button text content",
+          "type": "string"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Button icon content",
+          "type": "string"
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "If true, the button is a toggle and is currently in the active state.",
+          "type": "boolean"
+        },
+        {
+          "name": "disabled",
+          "attribute": "disabled",
+          "description": "Disables button interactions",
+          "type": "boolean"
+        },
+        {
+          "name": "raised",
+          "attribute": "raised",
+          "description": "Applies button elevation and shadow styling",
+          "type": "boolean"
+        },
+        {
+          "name": "outlined",
+          "attribute": "outlined",
+          "description": "Outlines button with defined border",
+          "type": "boolean"
+        }
+      ],
+      "events": [
+        {
+          "name": "active-changed",
+          "description": "Fires whenever active property changes"
+        },
+        {
+          "name": "disabled-changed",
+          "description": "Fires whenever disabled property changes"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--uxl-button-background-color",
+          "description": "Button background color"
+        },
+        {
+          "name": "--uxl-button-border-color",
+          "description": "Button border color"
+        }
+      ]
+    }
+  ]
+}
