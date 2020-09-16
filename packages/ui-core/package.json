@@ -1,0 +1,24 @@
+{
+  "name": "@uxland/ui-core",
+  "version": "0.0.0",
+  "description": "Components Core",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-core#readme",
+  "license": "ISC",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/components/issues"
+  }
+}
