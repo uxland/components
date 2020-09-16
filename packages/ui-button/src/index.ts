@@ -23,8 +23,11 @@ export interface ButtonConfig extends CoreConfig {
 
 /**
  * Button component
+ * @element uxl-button
+ *
  * @fires active-changed - Fires whenever active property changes
  * @fires disabled-changed - Fires whenever disabled property changes
+ *
  * @cssprop --uxl-button-background-color - Button background color
  * @cssprop --uxl-button-border-color - Button border color
  */
