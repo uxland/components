@@ -8,6 +8,13 @@
   "main": "lib/index",
   "module": "es/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "http://registry.npmjs.org/"
