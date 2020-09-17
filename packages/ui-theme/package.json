@@ -6,9 +6,12 @@
   "homepage": "https://github.com/uxland/components/tree/master/packages/ui-theme#readme",
   "license": "ISC",
   "files": [
+    "_colors.scss",
+    "_shadows.scss",
     "theme.scss"
   ],
   "publishConfig": {
+    "access": "public",
     "registry": "http://registry.npmjs.org/"
   },
   "repository": {
