@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.1](https://github.com/uxland/components/compare/@uxland/ui-core@0.0.1-alpha.0...@uxland/ui-core@0.0.1-alpha.1) (2020-09-17)
+
+
+### Bug Fixes
+
+* change es build to support optional chaining transpilation ([7101d81](https://github.com/uxland/components/commit/7101d81ea10cae154cc0f8fa1a094967579eac80))
+
+
+
+
+
 ## 0.0.1-alpha.0 (2020-09-17)
 
 
