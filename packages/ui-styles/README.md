@@ -1,4 +1,4 @@
-# UXL Button Component [![npm version](https://badge.fury.io/js/%40uxland%2Fui-button.svg)](https://badge.fury.io/js/%40uxland%2Fui-button)
+# UXL Styles Component [![npm version](https://badge.fury.io/js/%40uxland%2Fui-styles.svg)](https://badge.fury.io/js/%40uxland%2Fui-styles)
 
 | Build Status                                    | Statements                                    | Branches                                  | Functions                                   | Lines                               |
 | ----------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ------------------------------------------- | ----------------------------------- |
@@ -6,6 +6,6 @@
 
 ## Installation
 
-`npm i @uxland/ui-button`
+`npm i @uxland/ui-styles`
 
 ## Usage
