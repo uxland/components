@@ -1,6 +1,6 @@
 {
   "name": "@uxland/ui-button",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "Button Component",
   "author": "UXLand <dev@uxland.es>",
   "homepage": "https://github.com/uxland/components/tree/master/packages/ui-button#readme",
@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "@uxland/ui-core": "^0.0.1-alpha.1",
-    "@uxland/ui-icon": "^0.0.1-alpha.1",
+    "@uxland/ui-icon": "^0.0.1-alpha.2",
     "@uxland/ui-styles": "^0.0.1-alpha.0",
     "@uxland/ui-theme": "^0.0.1-alpha.0",
     "@uxland/uxl-utilities": "^3.5.3",

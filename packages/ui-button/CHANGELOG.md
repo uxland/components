@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.3](https://github.com/uxland/components/compare/@uxland/ui-button@0.0.1-alpha.2...@uxland/ui-button@0.0.1-alpha.3) (2020-09-18)
+
+
+### Bug Fixes
+
+* publish styling api for icon ([8479a5d](https://github.com/uxland/components/commit/8479a5d49277f5f753b789e4dc9b28f193534dcb))
+* use uxl-icon component inside uxl-button for icon-button option ([6d8bfcf](https://github.com/uxland/components/commit/6d8bfcfe2e0dc83ef243bba4d5d3f44b75604209))
+
+
+
+
+
 ## [0.0.1-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-button@0.0.1-alpha.1...@uxland/ui-button@0.0.1-alpha.2) (2020-09-18)
 
 
