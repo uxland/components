@@ -11,6 +11,7 @@ import {
 import { unsafeSVG } from "lit-html/directives/unsafe-svg";
 import "@uxland/ui-iconset";
 import { CoreConfig } from "@uxland/ui-core";
+import { styles } from "./styles";
 
 export interface IconConfig extends CoreConfig {
   src?: string;
@@ -20,6 +21,9 @@ export interface IconConfig extends CoreConfig {
 /**
  * Icon component
  * @element uxl-icon
+ *
+ * @cssprop --uxl-icon-size - Icon size (width & height)
+ * @cssprop --uxl-icon-color - Icon color
  */
 @customElement("uxl-icon")
 export default class UxlIcon extends LitElement {
@@ -32,9 +36,9 @@ export default class UxlIcon extends LitElement {
   }
 
   static get styles(): CSSResult {
-    return css``;
+    return styles;
   }
-  å;
+
   @property({ type: String })
   private src: string;
 

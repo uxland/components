@@ -5,6 +5,7 @@ export const styles = css`
   ${coreStyles}
   :host {
     --uxl-button-background-color: var(--uxl-base-color);
+    --uxl-button-icon-color: white;
     --uxl-button-text-color: white;
     --uxl-button-border-color: var(--uxl-base-color);
   }
@@ -52,4 +53,8 @@ export const styles = css`
   // elix-button:not([disabled]):hover::part(inner) {
   //   background-color: green;
   // }
+
+  elix-button > uxl-icon {
+    --uxl-icon-color: var(--uxl-button-icon-color);
+  }
 `;

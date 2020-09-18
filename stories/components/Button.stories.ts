@@ -1,6 +1,7 @@
 import "@uxland/ui-button";
 import { ButtonConfig } from "@uxland/ui-button";
 import { html } from "lit-html";
+import "./Button.css";
 
 export default {
   title: "Components/Button",

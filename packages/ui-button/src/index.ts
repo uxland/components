@@ -23,6 +23,7 @@ export interface ButtonConfig extends CoreConfig {
  *
  * @cssprop --uxl-button-background-color - Button background color
  * @cssprop --uxl-button-border-color - Button border color
+ * @cssprop --uxl-button-icon-color - Button icon color
  */
 @customElement("uxl-button")
 export default class UxlButton extends LitElement {
