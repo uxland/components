@@ -1,9 +1,9 @@
 {
-  "name": "@uxland/ui-button",
-  "version": "0.0.1-alpha.1",
-  "description": "Button Component",
-  "author": "UXLand <dev@uxland.es>",
-  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-button#readme",
+  "name": "@uxland/ui-styles",
+  "version": "0.0.0",
+  "description": "Styles",
+  "author": "Alex Vizcaino <avizcaino@uxland.es>",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-styles#readme",
   "license": "ISC",
   "main": "lib/index",
   "module": "es/index.js",
@@ -40,15 +40,7 @@
     "url": "https://github.com/uxland/components/issues"
   },
   "dependencies": {
-    "@uxland/ui-core": "^0.0.1-alpha.1",
-    "@uxland/ui-styles": "^0.0.0",
-    "@uxland/ui-theme": "^0.0.1-alpha.0",
-    "@uxland/uxl-utilities": "^3.5.3",
-    "@webcomponents/webcomponentsjs": "^2.4.4",
-    "elix": "^14.1.0",
-    "lit-element": "^2.4.0",
-    "sass": "^1.26.10",
-    "web-component-analyzer": "^1.1.6"
+    "lit-element": "^2.4.0"
   },
   "devDependencies": {
     "@olavoparno/jest-badges-readme": "^1.5.1",
