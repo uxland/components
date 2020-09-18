@@ -7,10 +7,12 @@ export default {
   component: "uxl-button",
 };
 
+(window as any).UxlIconSet.requestAvailability().registerIconset("uxl", {
+  remix:
+    '<svg style="width:24px;height:24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">&gt;<path d="M8 17l4-4h3.2c.4 1.2 1.5 2 2.8 2 1.7 0 3-1.3 3-3s-1.3-3-3-3c-1.3 0-2.4.8-2.8 2H12L8 7V3H3v5h3l4.2 4L6 16H3v5h5v-4z"/></svg>',
+});
+
 const defaultConfig = { label: "Button" };
-const icon = `<svg id="menuIcon" part="menu-icon" viewBox="0 0 18 18" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-  <path d="M0 3 h18 v2 h-18 z m0 5 h18 v2 h-18 z m0 5 h18 v2 h-18 z"></path>
-</svg>`;
 const handleClick = (ev) => alert(`Button clicked!`);
 const handleActiveChanged = (ev) => alert(`active: ${ev.detail.active}`);
 const handleDisabledChanged = (ev) => alert(`disabled: ${ev.detail.disabled}`);
@@ -72,18 +74,9 @@ export const Outlined = (config: ButtonConfig) =>
   ></uxl-button>`;
 Outlined.args = { ...defaultConfig, outlined: true };
 
-const iconCode =
-  '(config: ButtonConfig) => html`<uxl-button label="${config.label}" icon=${config.icon}></uxl-button>`';
 export const IconButton = (config: ButtonConfig) =>
-  html`<uxl-button label="${config.label}" icon=${config.icon}></uxl-button>`;
-IconButton.args = { ...defaultConfig, icon };
-IconButton.parameters = {
-  docs: {
-    source: {
-      code: `const config = {icon: '${icon}'};\n${iconCode}`,
-    },
-  },
-};
+  html`<uxl-button label="${config.label}" icon="${config.icon}"></uxl-button>`;
+IconButton.args = { ...defaultConfig, icon: "uxl:remix" };
 
 export const Click = (config: ButtonConfig) =>
   html`<uxl-button label="${config.label}" @click=${handleClick}></uxl-button>`;

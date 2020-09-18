@@ -1,17 +1,8 @@
 import { CoreConfig } from "@uxland/ui-core";
+import "@uxland/ui-icon";
 import "elix/define/Button";
-import {
-  css,
-  CSSResult,
-  customElement,
-  LitElement,
-  property,
-  unsafeCSS,
-} from "lit-element";
+import { CSSResult, customElement, LitElement, property } from "lit-element";
 import { html, TemplateResult } from "lit-html";
-import { unsafeSVG } from "lit-html/directives/unsafe-svg";
-// import styles from './styles.scss';
-// console.log(styles);
 import { styles } from "./styles";
 
 export interface ButtonConfig extends CoreConfig {
@@ -46,7 +37,7 @@ export default class UxlButton extends LitElement {
   label: string;
 
   /**
-   * Button icon content
+   * Button icon content. Uses `uxl-icon` underneath so icon must be defined with format `iconSetId:iconId`
    */
   @property({ type: String })
   icon: string;
@@ -102,7 +93,8 @@ export default class UxlButton extends LitElement {
       ?outlined="${this.outlined}"
     >
       ${this.icon && this.icon != "undefined"
-        ? html`${unsafeSVG(this.icon)}<span>${this.label}</span>`
+        ? html`<uxl-icon icon=${this.icon}></uxl-icon
+            ><span>${this.label}</span>`
         : html`${this.label}`}
     </elix-button>`;
   }
