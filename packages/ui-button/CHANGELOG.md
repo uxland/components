@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-button@0.0.1-alpha.1...@uxland/ui-button@0.0.1-alpha.2) (2020-09-18)
+
+
+### Bug Fixes
+
+* add styles package to centralize components theming ([04f3a39](https://github.com/uxland/components/commit/04f3a3937799a7c108878fb8a7ba8141fa0ec34a))
+
+
+
+
+
 ## [0.0.1-alpha.1](https://github.com/uxland/components/compare/@uxland/ui-button@0.0.1-alpha.0...@uxland/ui-button@0.0.1-alpha.1) (2020-09-17)
 
 
