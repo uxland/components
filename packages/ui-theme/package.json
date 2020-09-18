@@ -1,24 +1,23 @@
 {
   "name": "@uxland/ui-theme",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.0",
   "description": "Core Theme",
   "author": "UXLand <dev@uxland.es>",
   "homepage": "https://github.com/uxland/components/tree/master/packages/ui-theme#readme",
   "license": "ISC",
   "files": [
-    "_colors.scss",
-    "_shadows.scss",
     "theme.scss"
   ],
   "publishConfig": {
-    "access": "public",
     "registry": "http://registry.npmjs.org/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/uxland/components.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
   "bugs": {
     "url": "https://github.com/uxland/components/issues"
   }

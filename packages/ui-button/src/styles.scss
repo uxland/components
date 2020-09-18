@@ -1,0 +1,53 @@
+@import '@uxland/ui-theme/theme';
+
+:host {
+  --uxl-button-background-color: #{$uxl-base-color};
+  --uxl-button-text-color: white;
+  --uxl-button-border-color: #{$uxl-base-color};
+}
+
+elix-button {
+  &::part(inner) {
+    height: 36px;
+    min-width: 64px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: var(--uxl-button-background-color);
+    color: var(--uxl-button-text-color);
+  }
+
+  span {
+    margin-left: 8px;
+  }
+
+  &[disabled]::part(inner) {
+    opacity: 0.38;
+    pointer-events: none;
+  }
+
+  &[raised]::part(inner) {
+    box-shadow: $shadow-elevation-2dp;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &[active]::part(inner) {
+    box-shadow: $shadow-elevation-4dp;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  &[outlined]::part(inner) {
+    box-shadow: $shadow-none;
+    border: 1px solid var(--uxl-button-border-color);
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  // &:not([disabled]):hover::part(inner) {
+  //   background-color: green;
+  // }
+}
