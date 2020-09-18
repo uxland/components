@@ -10,7 +10,9 @@ import {
 } from "lit-element";
 import { html, TemplateResult } from "lit-html";
 import { unsafeSVG } from "lit-html/directives/unsafe-svg";
-import styles from "./styles.scss";
+// import styles from './styles.scss';
+// console.log(styles);
+import { styles } from "./styles";
 
 export interface ButtonConfig extends CoreConfig {
   label: string;
@@ -106,8 +108,6 @@ export default class UxlButton extends LitElement {
   }
 
   static get styles(): CSSResult {
-    return css`
-      ${unsafeCSS(styles)}
-    `;
+    return styles;
   }
 }
