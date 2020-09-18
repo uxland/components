@@ -43,10 +43,6 @@
   "scripts": {
     "analyze-wc": "wca analyze \"packages/*/src/**/*.ts\" --outFile custom-elements.json",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "build": "lerna run build --stream",
-    "readme:coverage": "lerna run readme:coverage --stream",
-    "release": "yarn build && yarn test && yarn readme:coverage",
-    "test": "lerna run test --parallel"
+    "build-storybook": "build-storybook"
   }
 }
