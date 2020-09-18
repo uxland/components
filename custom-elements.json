@@ -13,7 +13,7 @@
         },
         {
           "name": "icon",
-          "description": "Button icon content",
+          "description": "Button icon content. Uses `uxl-icon` underneath so icon must be defined with format `iconSetId:iconId`",
           "type": "string"
         },
         {
@@ -47,7 +47,7 @@
         {
           "name": "icon",
           "attribute": "icon",
-          "description": "Button icon content",
+          "description": "Button icon content. Uses `uxl-icon` underneath so icon must be defined with format `iconSetId:iconId`",
           "type": "string"
         },
         {
@@ -95,6 +95,33 @@
           "description": "Button border color"
         }
       ]
+    },
+    {
+      "name": "uxl-icon",
+      "path": "./packages/ui-icon/src/index.ts",
+      "description": "Icon component",
+      "attributes": [
+        {
+          "name": "icon",
+          "description": "Use `icon` to pass icon id using format of `iconSetId:iconId`",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "å"
+        },
+        {
+          "name": "icon",
+          "attribute": "icon",
+          "description": "Use `icon` to pass icon id using format of `iconSetId:iconId`",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "uxl-iconset",
+      "path": "./packages/ui-iconset/src/index.ts"
     }
   ]
 }
