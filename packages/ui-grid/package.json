@@ -1,0 +1,39 @@
+{
+  "name": "@uxland/ui-grid",
+  "version": "0.0.0",
+  "description": "Grid Component",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-button#readme",
+  "license": "ISC",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/components.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/components/issues"
+  },
+  "dependencies": {
+    "@material/mwc-icon": "^0.20.0",
+    "@uxland/style-utilities": "^1.0.0-alpha.7",
+    "@uxland/ui-core": "^0.0.1-alpha.1",
+    "lit-element": "^2.4.0",
+    "lit-virtualizer": "^0.4.2"
+  }
+}
