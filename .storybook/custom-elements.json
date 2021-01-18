@@ -1,0 +1,118 @@
+{
+  "version": "experimental",
+  "tags": [
+    {
+      "name": "uxl-dummy",
+      "path": "./../packages/ui-dummy/src/index.ts",
+      "attributes": [
+        {
+          "name": "reactive",
+          "type": "boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "reactive",
+          "attribute": "reactive",
+          "type": "boolean",
+          "default": "false"
+        }
+      ]
+    },
+    {
+      "name": "uxl-grid",
+      "path": "./../packages/ui-grid/src/index.ts",
+      "attributes": [
+        {
+          "name": "extraStyles",
+          "description": "Properties"
+        },
+        {
+          "name": "source",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "orderedList",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "virtualizeList",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "columns",
+          "type": "IColumn[]",
+          "default": "[]"
+        },
+        {
+          "name": "showHeader",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "renderCard",
+          "type": "(any: any) => any"
+        }
+      ],
+      "properties": [
+        {
+          "name": "extraStyles",
+          "attribute": "extraStyles",
+          "description": "Properties"
+        },
+        {
+          "name": "source",
+          "attribute": "source",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "orderedList",
+          "attribute": "orderedList",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "virtualizeList",
+          "attribute": "virtualizeList",
+          "type": "array",
+          "default": "[]"
+        },
+        {
+          "name": "columns",
+          "attribute": "columns",
+          "type": "IColumn[]",
+          "default": "[]"
+        },
+        {
+          "name": "showHeader",
+          "attribute": "showHeader",
+          "type": "boolean",
+          "default": "true"
+        },
+        {
+          "name": "renderCard",
+          "attribute": "renderCard",
+          "type": "(any: any) => any"
+        },
+        {
+          "name": "gridWidth",
+          "type": "() => void",
+          "default": "\"() => {\\n    const doc: HTMLElement = this.shadowRoot.querySelector(\\\"#grid\\\");\\n    if (doc) {\\n      doc.style.setProperty(\\\"--grid-width\\\", `${doc.offsetWidth}px`);\\n      //console.log(doc.offsetWidth);\\n      doc.style.setProperty(\\\"--number-columns\\\", `${this.columns.length + 1}`);\\n    }\\n  }\""
+        }
+      ],
+      "events": [
+        {
+          "name": "uxl-grid-row-cell-selected"
+        },
+        {
+          "name": "uxl-grid-content-cell-selected"
+        }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,12 @@
-import './components/confirm-component';
-import { invariant } from '@uxland/uxl-utilities';
+import "./components/confirm-component";
+import { invariant } from "@uxland/uxl-utilities";
 declare type Localizer = (key: string, ...args: any[]) => string;
 
 export interface ConfirmOptions<T = any> {
   title?: string;
-  titleArgs?: Object;
+  titleArgs?: Record<string, unknown>;
   message?: string;
-  messageArgs?: Object;
+  messageArgs?: Record<string, unknown>;
   showCloseButton?: boolean;
   type?: ConfirmType;
   fullScreen?: boolean;
@@ -23,7 +23,7 @@ export interface ConfirmOptions<T = any> {
   model?: T;
 }
 
-export type ConfirmType = 'danger' | 'warning' | 'info' | 'success';
+export type ConfirmType = "danger" | "warning" | "info" | "success";
 export interface ConfirmStyles {
   backgroundColor?: string;
   textColor?: string;
@@ -35,30 +35,53 @@ export interface ConfirmStyles {
   height?: string;
 }
 
-export const doConfirm = async (options: ConfirmOptions, localizer?: Localizer): Promise<any> => {
-  invariant(options.message || options.htmlTag, 'message or htmlTag options properties are required');
-  return new Promise<any>(async resolve => {
-    const componentName = 'confirm-component';
+export const doConfirm = async (
+  options: ConfirmOptions,
+  localizer?: Localizer
+): Promise<any> => {
+  invariant(
+    options.message || options.htmlTag,
+    "message or htmlTag options properties are required"
+  );
+  //@ts-ignore
+  return new Promise<any>(async (resolve) => {
+    const componentName = "confirm-component";
 
-    if (localizer && options.title) options = { ...options, title: localizer(options.title, { ...options.titleArgs }) };
+    if (localizer && options.title)
+      options = {
+        ...options,
+        title: localizer(options.title, {
+          ...options.titleArgs,
+        }),
+      };
 
-    if (localizer && options.message) options = { ...options, message: localizer(options.message, { ...options.messageArgs }) };
+    if (localizer && options.message)
+      options = {
+        ...options,
+        message: localizer(options.message, {
+          ...options.messageArgs,
+        }),
+      };
 
     if (options.htmlTag && options.htmlUrl) await import(options.htmlUrl);
 
-    const component: any = document.body.appendChild(document.createElement(componentName));
+    const component: any = document.body.appendChild(
+      document.createElement(componentName)
+    );
 
     if (options.containerId) component.id = options.containerId;
 
     component.options = options;
-    let result = component._updatePromise;
+    const result = component._updatePromise;
 
     result.then(() => {
       if (options.htmlTag) {
-        let customComponent = component.shadowRoot.querySelector(`#__custom-element__`);
+        const customComponent = component.shadowRoot.querySelector(
+          `#__custom-element__`
+        );
         customComponent.model = options.model;
       }
-      component.addEventListener('closed', closeComponent);
+      component.addEventListener("closed", closeComponent);
       component.options && component.show();
     });
 

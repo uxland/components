@@ -1,0 +1,96 @@
+@import "~@uxland/style-utilities/mediaqueries-styles";
+
+:host {
+  min-height: 1px;
+  height: 100%;
+}
+
+$min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
+
+@mixin format-grid {
+  display: grid;
+  @include phone {
+    gap: 4px;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+  }
+  @include tablet {
+    gap: var(--uxl-grid-gap, 16px);
+    grid-template-columns: repeat(auto-fit, minmax(#{$min-grid}, 1fr));
+  }
+}
+
+.header {
+  @include format-grid;
+  border-bottom: 1px solid grey;
+
+  @include phone {
+    display: none;
+  }
+
+  .header__cell {
+    padding: 16px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    iron-icon {
+      --iron-icon-fill-color: var(--uxl-grid-order-icon-color);
+      --iron-icon-width: var(--uxl-grid-order-icon-width);
+      --iron-icon-height: var(--uxl-grid-order-icon-height);
+    }
+  }
+}
+
+#grid {
+  height: 100%;
+  min-height: 1px;
+}
+
+.content {
+  height: 100%;
+  min-height: 1px;
+
+  .card {
+    display: none;
+    @include phone {
+      display: flex;
+    }
+  }
+  .content__row {
+    @include format-grid;
+    border-bottom: 1px solid grey;
+    color: var(--uxl-grid-row-color);
+    width: 100%;
+
+    .card--enabled {
+      @include phone {
+        display: none;
+      }
+    }
+    &:hover:not(.disabled) {
+      background-color: var(--uxl-grid-row-hover-color);
+      cursor: pointer;
+    }
+
+    &.disabled {
+      color: var(--uxl-grid-row-disabled-color);
+      background-color: var(--uxl-grid-row-disabled-background-color);
+    }
+
+    .content__cell {
+      padding: 16px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include phone {
+        padding: 0;
+      }
+    }
+  }
+}
+
+lit-virtualizer {
+  min-height: 1px;
+  height: 100%;
+}

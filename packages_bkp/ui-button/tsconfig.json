@@ -1,0 +1,9 @@
+{
+  "extends": "../../node_modules/@uxland/project-tools/build/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2018",
+    "rootDir": "./src",
+    "baseUrl": "./src"
+  },
+  "include": ["src/**/*.ts"]
+}
