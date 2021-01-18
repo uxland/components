@@ -161,7 +161,6 @@ export class UxlGrid extends propertiesObserver(LitElement) {
 
   sourceChanged(newSource: any, oldSource: any) {
     if (!R.equals(newSource, oldSource)) {
-      console.log("changed");
       this.orderedList = R.clone(this.source);
       if (this.selectedColumn) {
         if (this.columns) {
