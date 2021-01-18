@@ -1,0 +1,48 @@
+@import 'flex-layout-styles';
+
+:host {
+  @include layout;
+  @include layout-center-center;
+  flex: 1;
+  --iron-icon-fill-color: var(--uxl-interaction-notify-icon-color, currentcolor);
+}
+
+paper-toast {
+  @include layout-horizontal;
+  @include layout-justified;
+  @include layout-center;
+  --paper-toast-color: var(--uxl-interaction-notify-text-color, #f1f1f1);
+  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #323232);
+  padding: var(--uxl-interaction-notify-padding, #{16px 16px 16px 24px});
+  border-radius: 5px;
+}
+
+paper-toast.fit-bottom {
+  border-radius: 0;
+}
+
+paper-toast[type='danger'] {
+  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #f44336);
+}
+
+paper-toast[type='warning'] {
+  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #ff9800);
+}
+
+paper-toast[type='info'] {
+  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #2196f3);
+}
+
+paper-toast[type='success'] {
+  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #4caf50);
+}
+
+paper-toast[position='top'] {
+  position: absolute !important;
+  top: 0 !important;
+}
+
+paper-toast[position='center'] {
+  position: absolute !important;
+  left: auto !important;
+}
