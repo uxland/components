@@ -1,7 +1,7 @@
 {
   "name": "@uxland/ui-grid",
   "private": true,
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
   "description": "Grid Component",
   "author": "UXLand <dev@uxland.es>",
   "homepage": "https://github.com/uxland/components/tree/master/packages/ui-button#readme",
@@ -33,7 +33,7 @@
   "dependencies": {
     "@material/mwc-icon": "^0.20.0",
     "@uxland/style-utilities": "^1.0.0-alpha.7",
-    "@uxland/ui-core": "^0.0.1-alpha.2",
+    "@uxland/ui-core": "^0.0.1-alpha.3",
     "lit-element": "^2.4.0",
     "lit-virtualizer": "^0.4.2"
   }

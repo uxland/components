@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.3](https://github.com/uxland/components/compare/@uxland/ui-core@0.0.1-alpha.2...@uxland/ui-core@0.0.1-alpha.3) (2021-01-20)
+
+
+### Bug Fixes
+
+* dummy ([ea82942](https://github.com/uxland/components/commit/ea82942cceb894a9ea6c2910e0f3aa62d2a35bbe))
+
+
+
+
+
 ## [0.0.1-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-core@0.0.1-alpha.1...@uxland/ui-core@0.0.1-alpha.2) (2021-01-20)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.1](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.0...@uxland/ui-grid@0.0.1-alpha.1) (2021-01-20)
+
+**Note:** Version bump only for package @uxland/ui-grid
+
+
+
+
+
 ## 0.0.1-alpha.0 (2021-01-20)
 
 
