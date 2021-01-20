@@ -3,7 +3,7 @@ import { ConfirmOptions, doConfirm } from "@uxland/ui-interaction";
 import "./confirmation";
 
 export default {
-  title: "Mixins/Interaction",
+  title: "Mixins/Interaction Confirmation",
   //   component: "uxl-grid",
   //   parameters: {
   //     actions: {
@@ -14,7 +14,7 @@ export default {
 
 const openConfirm = (config) => doConfirm(config);
 const Template = (config) => html`<button @click=${() => openConfirm(config)}>
-  Open
+  Open Confirmation
 </button>`;
 
 export const Basic = Template.bind({});

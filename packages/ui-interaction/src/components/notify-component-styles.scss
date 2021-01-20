@@ -13,7 +13,7 @@ paper-toast {
   @include layout-center;
   --paper-toast-color: var(--uxl-interaction-notify-text-color, #f1f1f1);
   --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #323232);
-  padding: var(--uxl-interaction-notify-padding, #{16px 16px 16px 24px});
+  padding: var(--uxl-interaction-notify-padding, #{0px 0px 0px 24px});
   border-radius: 5px;
 }
 
