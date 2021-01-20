@@ -28,7 +28,6 @@ export const propertiesObserver = <T extends Constructor<LitElement>>(
         if (this[`${String(name)}Changed`])
           this[`${String(name)}Changed`](this[name], oldValue);
       }
-
       return result;
     }
   }
