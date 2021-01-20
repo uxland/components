@@ -1,4 +1,4 @@
-import { propertiesObserver } from "@uxland/ui-core";
+import { CoreConfig, propertiesObserver } from "@uxland/ui-core";
 import {
   css,
   customElement,
@@ -12,6 +12,12 @@ import * as R from "ramda";
 import styles from "./styles.scss";
 import { template } from "./template";
 
+export interface GridConfig extends CoreConfig {
+  columns: IColumn[];
+  source: any;
+  showHeader: boolean;
+}
+
 interface IColumn {
   property?: string;
   displayName?: string;
@@ -23,6 +29,20 @@ interface IColumn {
 
 type ColumnOrder = "DES" | "ASC" | null;
 
+/**
+ * Grid component
+ * @element uxl-grid
+ *
+ * @prop source - Grid data content
+ *
+ * @fires grid-row-selected - Fires whenever a row is selected
+ * @fires grid-cell-selected - Fires whenever a cell is selected
+ *
+ * @cssprop --uxl-grid-row-color - Row content color
+ * @cssprop --uxl-grid-row-hover-color - Row hover background color
+ * @cssprop --uxl-grid-row-disabled-color - Row content disabled color
+ * @cssprop --uxl-grid-row-disabled-background-color - Row content disabled background color
+ */
 @customElement("uxl-grid")
 export class UxlGrid extends propertiesObserver(LitElement) {
   /**
@@ -32,11 +52,11 @@ export class UxlGrid extends propertiesObserver(LitElement) {
   @property()
   public extraStyles: any;
 
-  @property()
+  @property({ type: Object })
   public source: any[] = [];
 
   @property()
-  public orderedList: any[] = [];
+  private orderedList: any[] = [];
 
   @property()
   public virtualizeList: any[] = [];
@@ -72,14 +92,11 @@ export class UxlGrid extends propertiesObserver(LitElement) {
     const item = JSON.parse(htmlElement.dataset["item"]);
     const row = Number.parseInt(htmlElement.dataset["row"]);
     if (item) {
-      const onTableRowCellSelected = new CustomEvent(
-        "uxl-grid-row-cell-selected",
-        {
-          composed: true,
-          detail: { item, row },
-        }
-      );
-      this.dispatchEvent(onTableRowCellSelected);
+      const onRowSelected = new CustomEvent("grid-row-selected", {
+        composed: true,
+        detail: { item, row },
+      });
+      this.dispatchEvent(onRowSelected);
     }
   }
 
@@ -89,14 +106,11 @@ export class UxlGrid extends propertiesObserver(LitElement) {
     const column = Number.parseInt(htmlElement.dataset["column"]);
     const row = Number.parseInt(htmlElement.dataset["row"]);
     if (item) {
-      const onTableRowCellSelected = new CustomEvent(
-        "uxl-grid-content-cell-selected",
-        {
-          composed: true,
-          detail: { item, column, row },
-        }
-      );
-      this.dispatchEvent(onTableRowCellSelected);
+      const onCellSelected = new CustomEvent("grid-cell-selected", {
+        composed: true,
+        detail: { item, column, row },
+      });
+      this.dispatchEvent(onCellSelected);
     }
   }
 

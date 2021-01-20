@@ -1,4 +1,4 @@
 export interface CoreConfig {
-  dummy: any;
+  dummy?: any;
 }
 export * from "./properties-observer";

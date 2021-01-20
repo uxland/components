@@ -23,6 +23,7 @@
     {
       "name": "uxl-grid",
       "path": "./../packages/ui-grid/src/index.ts",
+      "description": "Grid component",
       "attributes": [
         {
           "name": "extraStyles",
@@ -55,7 +56,7 @@
         },
         {
           "name": "renderCard",
-          "type": "(any: any) => any"
+          "type": "(item: any) => any"
         }
       ],
       "properties": [
@@ -97,20 +98,114 @@
         {
           "name": "renderCard",
           "attribute": "renderCard",
-          "type": "(any: any) => any"
+          "type": "(item: any) => any"
         },
         {
           "name": "gridWidth",
           "type": "() => void",
-          "default": "\"() => {\\n    const doc: HTMLElement = this.shadowRoot.querySelector(\\\"#grid\\\");\\n    if (doc) {\\n      doc.style.setProperty(\\\"--grid-width\\\", `${doc.offsetWidth}px`);\\n      //console.log(doc.offsetWidth);\\n      doc.style.setProperty(\\\"--number-columns\\\", `${this.columns.length + 1}`);\\n    }\\n  }\""
+          "default": "\"() => {\\n    const doc: any = this.shadowRoot?.querySelector(\\\"#grid\\\");\\n    if (doc) {\\n      (doc as HTMLElement).style.setProperty(\\n        \\\"--grid-width\\\",\\n        `${(doc as HTMLElement).offsetWidth}px`\\n      );\\n      //console.log((doc as HTMLElement).offsetWidth);\\n      (doc as HTMLElement).style.setProperty(\\n        \\\"--number-columns\\\",\\n        `${this.columns?.length + 1}`\\n      );\\n    }\\n  }\""
         }
       ],
       "events": [
         {
-          "name": "uxl-grid-row-cell-selected"
+          "name": "grid-row-selected",
+          "description": "Fires whenever a row is selected"
         },
         {
-          "name": "uxl-grid-content-cell-selected"
+          "name": "grid-cell-selected",
+          "description": "Fires whenever a cell is selected"
+        }
+      ],
+      "cssProperties": [
+        {
+          "name": "--uxl-grid-row-color",
+          "description": "Row content color"
+        },
+        {
+          "name": "--uxl-grid-row-hover-color",
+          "description": "Row hover background color"
+        },
+        {
+          "name": "--uxl-grid-row-disabled-color",
+          "description": "Row content disabled color"
+        },
+        {
+          "name": "--uxl-grid-row-disabled-background-color",
+          "description": "Row content disabled background color"
+        }
+      ]
+    },
+    {
+      "name": "confirm-component",
+      "path": "./../packages/ui-interaction/src/components/confirm-component.ts",
+      "attributes": [
+        {
+          "name": "options",
+          "type": "ConfirmOptions<any>"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "attribute": "options",
+          "type": "ConfirmOptions<any>"
+        },
+        {
+          "name": "dialog"
+        },
+        {
+          "name": "closeButton",
+          "type": "HTMLElement"
+        },
+        {
+          "name": "acceptButton",
+          "type": "HTMLElement"
+        },
+        {
+          "name": "actionsContainer",
+          "type": "HTMLElement"
+        },
+        {
+          "name": "header",
+          "type": "HTMLElement"
+        },
+        {
+          "name": "content",
+          "type": "HTMLElement"
+        }
+      ],
+      "events": [
+        {
+          "name": "closed"
+        }
+      ]
+    },
+    {
+      "name": "notify-component",
+      "path": "./../packages/ui-interaction/src/components/notify-component.ts",
+      "attributes": [
+        {
+          "name": "options",
+          "type": "NotifyOptions<any>"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "attribute": "options",
+          "type": "NotifyOptions<any>"
+        },
+        {
+          "name": "toast"
+        },
+        {
+          "name": "closeButton",
+          "type": "HTMLElement"
+        }
+      ],
+      "events": [
+        {
+          "name": "closed"
         }
       ]
     }
