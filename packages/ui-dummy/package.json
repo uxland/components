@@ -1,5 +1,6 @@
 {
   "name": "@uxland/ui-dummy",
+  "private": true,
   "version": "0.0.0",
   "description": "Dummy Component",
   "author": "UXLand <dev@uxland.es>",

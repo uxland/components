@@ -1,5 +1,6 @@
 {
   "name": "@uxland/ui-grid",
+  "private": true,
   "version": "0.0.0",
   "description": "Grid Component",
   "author": "UXLand <dev@uxland.es>",
