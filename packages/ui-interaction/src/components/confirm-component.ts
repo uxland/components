@@ -114,13 +114,13 @@ export class ConfirmComponent extends LitElement {
       );
     styles.closeIconColor &&
       this.closeButton &&
-      this.closeButton.style.setProperty(
-        "--iron-icon-fill-color",
-        styles.closeIconColor
-      );
+      this.closeButton.style.setProperty("color", styles.closeIconColor);
     styles.acceptColor &&
       this.acceptButton &&
-      this.acceptButton.style.setProperty("color", styles.acceptColor);
+      this.acceptButton.style.setProperty(
+        "--mdc-theme-primary",
+        styles.acceptColor
+      );
     styles.headerBackgroundColor &&
       this.header &&
       this.header.style.setProperty(
