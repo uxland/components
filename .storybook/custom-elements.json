@@ -30,16 +30,6 @@
           "description": "Properties"
         },
         {
-          "name": "source",
-          "type": "array",
-          "default": "[]"
-        },
-        {
-          "name": "orderedList",
-          "type": "array",
-          "default": "[]"
-        },
-        {
           "name": "virtualizeList",
           "type": "array",
           "default": "[]"
@@ -57,6 +47,12 @@
         {
           "name": "renderCard",
           "type": "(item: any) => any"
+        },
+        {
+          "name": "source",
+          "description": "Grid data content",
+          "type": "array",
+          "default": "[]"
         }
       ],
       "properties": [
@@ -64,18 +60,6 @@
           "name": "extraStyles",
           "attribute": "extraStyles",
           "description": "Properties"
-        },
-        {
-          "name": "source",
-          "attribute": "source",
-          "type": "array",
-          "default": "[]"
-        },
-        {
-          "name": "orderedList",
-          "attribute": "orderedList",
-          "type": "array",
-          "default": "[]"
         },
         {
           "name": "virtualizeList",
@@ -104,6 +88,13 @@
           "name": "gridWidth",
           "type": "() => void",
           "default": "\"() => {\\n    const doc: any = this.shadowRoot?.querySelector(\\\"#grid\\\");\\n    if (doc) {\\n      (doc as HTMLElement).style.setProperty(\\n        \\\"--grid-width\\\",\\n        `${(doc as HTMLElement).offsetWidth}px`\\n      );\\n      //console.log((doc as HTMLElement).offsetWidth);\\n      (doc as HTMLElement).style.setProperty(\\n        \\\"--number-columns\\\",\\n        `${this.columns?.length + 1}`\\n      );\\n    }\\n  }\""
+        },
+        {
+          "name": "source",
+          "attribute": "source",
+          "description": "Grid data content",
+          "type": "array",
+          "default": "[]"
         }
       ],
       "events": [

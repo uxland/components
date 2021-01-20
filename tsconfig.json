@@ -17,7 +17,7 @@
     "outDir": "wc"
   },
 
-  "include": ["packages"],
+  "include": ["packages", "stories"],
 
   "exclude": ["node_modules", "web_modules"],
 

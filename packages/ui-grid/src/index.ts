@@ -64,7 +64,7 @@ export class UxlGrid extends propertiesObserver(LitElement) {
   @property()
   public columns: IColumn[] = [];
 
-  @property()
+  @property({ type: Boolean })
   public showHeader = true;
 
   @property()
