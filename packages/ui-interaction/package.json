@@ -1,6 +1,6 @@
 {
   "name": "@uxland/ui-interaction",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.0",
   "description": "Interaction Component",
   "author": "UXLand <dev@uxland.es>",
   "homepage": "https://github.com/uxland/components/tree/master/packages/ui-interaction#readme",
@@ -40,13 +40,13 @@
     "url": "https://github.com/uxland/components/issues"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.4.4",
-    "lit-element": "^2.4.0",
-    "@uxland/uxl-utilities": "^3.3.4",
-    "@polymer/paper-dialog": "^3.0.1",
-    "@polymer/paper-toast": "^3.0.1",
     "@material/mwc-button": "0.20.0",
     "@material/mwc-icon-button": "0.20.0",
+    "@polymer/paper-dialog": "^3.0.1",
+    "@polymer/paper-toast": "^3.0.1",
+    "@uxland/uxl-utilities": "^3.3.4",
+    "@webcomponents/webcomponentsjs": "^2.4.4",
+    "lit-element": "^2.4.0",
     "sass": "^1.26.10",
     "web-component-analyzer": "^1.1.6"
   },
