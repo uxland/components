@@ -41,7 +41,6 @@ const renderItemFactory = (
     )}
   </div>
 `;
-
 export const template = (props: UxlGrid) => html`
 <custom-style><style>${props.extraStyles}</style></custom-style>
 <div id="grid">
