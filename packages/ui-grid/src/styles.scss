@@ -33,10 +33,10 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
     overflow: hidden;
     text-overflow: ellipsis;
 
-    iron-icon {
-      --iron-icon-fill-color: var(--uxl-grid-order-icon-color);
-      --iron-icon-width: var(--uxl-grid-order-icon-width);
-      --iron-icon-height: var(--uxl-grid-order-icon-height);
+    mwc-icon {
+      fill: var(--uxl-grid-order-icon-color);
+      width: var(--uxl-grid-order-icon-width);
+      height: var(--uxl-grid-order-icon-height);
     }
   }
 }

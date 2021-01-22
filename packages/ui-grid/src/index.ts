@@ -92,8 +92,10 @@ export class UxlGrid extends propertiesObserver(LitElement) {
     const htmlElement: HTMLElement = event.currentTarget;
     const item = JSON.parse(htmlElement.dataset["item"]);
     const row = Number.parseInt(htmlElement.dataset["row"]);
+
     if (item) {
-      const onRowSelected = new CustomEvent("grid-row-selected", {
+      console.log("entra", item);
+      const onRowSelected = new CustomEvent("uxl-grid-row-cell-selected", {
         composed: true,
         detail: { item, row },
       });
@@ -107,7 +109,7 @@ export class UxlGrid extends propertiesObserver(LitElement) {
     const column = Number.parseInt(htmlElement.dataset["column"]);
     const row = Number.parseInt(htmlElement.dataset["row"]);
     if (item) {
-      const onCellSelected = new CustomEvent("grid-cell-selected", {
+      const onCellSelected = new CustomEvent("uxl-grid-content-cell-selected", {
         composed: true,
         detail: { item, column, row },
       });
