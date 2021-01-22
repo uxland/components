@@ -9,7 +9,8 @@ import {
 } from "lit-element";
 import "@material/mwc-icon-button/mwc-icon-button";
 import "@polymer/paper-toast/paper-toast.js";
-import styles from "./notify-component-styles.scss";
+// import styles from "./notify-component-styles.scss";
+import { style as styles } from "./notify-component-styles-css";
 import { interactionIcons } from "../icons";
 import { NotifyOptions } from "../notify";
 

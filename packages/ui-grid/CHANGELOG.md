@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.1...@uxland/ui-grid@0.0.1-alpha.2) (2021-01-21)
+
+
+### Bug Fixes
+
+* scss to ts for build purposes ([40070e7](https://github.com/uxland/components/commit/40070e7ae9ea8142cd14a8747dabcae56d932106))
+
+
+
+
+
 ## [0.0.1-alpha.1](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.0...@uxland/ui-grid@0.0.1-alpha.1) (2021-01-20)
 
 **Note:** Version bump only for package @uxland/ui-grid

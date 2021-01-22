@@ -9,7 +9,8 @@ import {
   unsafeCSS,
 } from "lit-element";
 import * as R from "ramda";
-import styles from "./styles.scss";
+// import styles from "./styles.scss";
+import { style as styles } from "./styles-css";
 import { template } from "./template";
 
 export interface GridConfig extends CoreConfig {
