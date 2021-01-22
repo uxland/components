@@ -24,7 +24,17 @@
     "url": "git+https://github.com/uxland/components.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build:es": "tsc -p tsconfig.json --outDir es --module esnext --target es2018 --noEmit false",
+    "build:cjs": "tsc -p tsconfig.json --outDir lib --noEmit false --declaration  --removeComments false",
+    "build:umd": "cross-env NODE_ENV=development rollup -c -o dist/index.js",
+    "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/index.min.js",
+    "build:clean": "rimraf es lib dist tmp tsconfig.tsbuildinfo",
+    "build": "yarn build:clean && npm-run-all --parallel build:es build:cjs && npm-run-all --parallel build:umd build:umd:min",
+    "prebuild": "echo nok > .buildstatus",
+    "postbuild": "echo ok > .buildstatus",
+    "readme:coverage": "node_modules/.bin/jest-badges-readme",
+    "test:unit": "jest --collect-coverage",
+    "test": "yarn test:unit"
   },
   "bugs": {
     "url": "https://github.com/uxland/components/issues"
