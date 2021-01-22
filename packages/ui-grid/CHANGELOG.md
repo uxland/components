@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.6](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.5...@uxland/ui-grid@0.0.1-alpha.6) (2021-01-22)
+
+
+### Bug Fixes
+
+* **ui-grid:** fixed name events ([f3ce346](https://github.com/uxland/components/commit/f3ce346a384515abbd7e6f8bc323648d36bc627b))
+
+
+
+
+
 ## [0.0.1-alpha.5](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.4...@uxland/ui-grid@0.0.1-alpha.5) (2021-01-22)
 
 
