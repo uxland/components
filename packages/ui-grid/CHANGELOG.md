@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.4](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.3...@uxland/ui-grid@0.0.1-alpha.4) (2021-01-22)
+
+
+### Bug Fixes
+
+* **ui-grid:** force publish ([a1df1b6](https://github.com/uxland/components/commit/a1df1b6c576e6aea894abebd6cd4f175f57d76f4))
+
+
+
+
+
 ## [0.0.1-alpha.3](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.2...@uxland/ui-grid@0.0.1-alpha.3) (2021-01-22)
 
 
