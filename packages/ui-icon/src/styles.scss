@@ -1,0 +1,10 @@
+:host {
+  --icon-size: 24px;
+  --icon-color: black;
+}
+
+svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  fill: var(--icon-color);
+}

@@ -1,0 +1,8 @@
+.container {
+  height: 25vh;
+}
+
+uxl-icon {
+  --icon-color: red;
+  --icon-size: 40px;
+}

@@ -1,0 +1,47 @@
+{
+  "name": "@uxland/ui-icon",
+  "version": "0.0.0",
+  "description": "Ui Icon Component",
+  "author": "UXLand <dev@uxland.es>",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-icon#readme",
+  "license": "ISC",
+  "main": "lib/index",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uxland/components.git"
+  },
+  "scripts": {
+    "build:es": "tsc -p tsconfig.json --outDir es --module esnext --target es2018 --noEmit false",
+    "build:cjs": "tsc -p tsconfig.json --outDir lib --noEmit false --declaration  --removeComments false",
+    "build:umd": "cross-env NODE_ENV=development rollup -c -o dist/index.js",
+    "build:umd:min": "cross-env NODE_ENV=production rollup -c -o dist/index.min.js",
+    "build:clean": "rimraf es lib dist tmp tsconfig.tsbuildinfo",
+    "build": "yarn build:clean && npm-run-all --parallel build:es build:cjs && npm-run-all --parallel build:umd build:umd:min",
+    "prebuild": "echo nok > .buildstatus",
+    "postbuild": "echo ok > .buildstatus",
+    "readme:coverage": "node_modules/.bin/jest-badges-readme",
+    "test:unit": "jest --collect-coverage",
+    "test": "yarn test:unit"
+  },
+  "bugs": {
+    "url": "https://github.com/uxland/components/issues"
+  },
+  "dependencies": {
+    "@uxland/style-utilities": "^1.0.0-alpha.7",
+    "@uxland/ui-core": "^0.0.1-alpha.3",
+    "lit-element": "^2.4.0"
+  }
+}
