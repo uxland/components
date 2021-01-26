@@ -105,6 +105,12 @@
         {
           "name": "grid-cell-selected",
           "description": "Fires whenever a cell is selected"
+        },
+        {
+          "name": "uxl-grid-row-cell-selected"
+        },
+        {
+          "name": "uxl-grid-content-cell-selected"
         }
       ],
       "cssProperties": [
@@ -197,6 +203,32 @@
       "events": [
         {
           "name": "closed"
+        }
+      ]
+    },
+    {
+      "name": "uxl-rich-text-editor",
+      "path": "./../packages/ui-rich-text-editor/src/rich-text-editor.ts",
+      "description": "Rich Text Editor component",
+      "attributes": [
+        {
+          "name": "options",
+          "description": "Available options",
+          "type": "RTEOptions[]"
+        }
+      ],
+      "properties": [
+        {
+          "name": "options",
+          "attribute": "options",
+          "description": "Available options",
+          "type": "RTEOptions[]"
+        }
+      ],
+      "events": [
+        {
+          "name": "text-changed",
+          "description": "Fires whenever the text changes"
         }
       ]
     }

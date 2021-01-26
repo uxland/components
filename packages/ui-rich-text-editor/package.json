@@ -1,9 +1,10 @@
 {
-  "name": "@uxland/ui-grid",
-  "version": "0.0.1-alpha.6",
-  "description": "Grid Component",
+  "name": "@uxland/ui-rich-text-editor",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Rich Text Editor Component",
   "author": "UXLand <dev@uxland.es>",
-  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-grid#readme",
+  "homepage": "https://github.com/uxland/components/tree/master/packages/ui-rich-text-editor#readme",
   "license": "ISC",
   "main": "lib/index",
   "module": "es/index.js",
@@ -40,10 +41,8 @@
     "url": "https://github.com/uxland/components/issues"
   },
   "dependencies": {
-    "@material/mwc-icon": "^0.20.0",
-    "@uxland/style-utilities": "^1.0.0-alpha.7",
     "@uxland/ui-core": "^0.0.1-alpha.3",
     "lit-element": "^2.4.0",
-    "lit-virtualizer": "^0.4.2"
+    "quill": "^1.3.7"
   }
 }
