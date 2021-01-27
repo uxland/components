@@ -19,7 +19,7 @@ export interface GridConfig extends CoreConfig {
   showHeader: boolean;
 }
 
-interface IColumn {
+export interface IColumn {
   property?: string;
   displayName?: string;
   renderCell?: (item: any) => any;
