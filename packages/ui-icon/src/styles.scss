@@ -1,6 +1,8 @@
 :host {
   --icon-size: 24px;
   --icon-color: black;
+  width: var(--icon-size);
+  height: var(--icon-size);
 }
 
 svg {
