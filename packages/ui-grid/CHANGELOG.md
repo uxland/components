@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.7](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.6...@uxland/ui-grid@0.0.1-alpha.7) (2021-01-27)
+
+
+### Bug Fixes
+
+* **ui-grid:** export interface ([479c22f](https://github.com/uxland/components/commit/479c22f46314f35090892fdfc7749a795fb008c9))
+
+
+
+
+
 ## [0.0.1-alpha.6](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.5...@uxland/ui-grid@0.0.1-alpha.6) (2021-01-22)
 
 
