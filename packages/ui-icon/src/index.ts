@@ -20,9 +20,10 @@ export interface IconConfig extends CoreConfig {
  * Icon component
  * @element uxl-icon
  *
+ * @prop svg - Svg to render
+ * @prop icon - icon name to use default icons
  *
- * @cssprop --icon-width - Icon Width
- * @cssprop --icon-height - Icon Height
+ * @cssprop --icon-size - Icon height and width
  * @cssprop --icon-color - Icon Color
  */
 @customElement("uxl-icon")
