@@ -3,6 +3,8 @@
   --icon-color: black;
   width: var(--icon-size);
   height: var(--icon-size);
+  display: flex;
+  justify-content: center;
 }
 
 svg {
