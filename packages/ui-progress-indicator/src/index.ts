@@ -8,17 +8,17 @@ import {
 } from "lit-element";
 import { style as styles } from "./styles-css";
 import { template } from "./template";
-import { TemplateResult } from "lit-html";
 import { CoreConfig } from "@uxland/ui-core";
 
-export interface IconConfig extends CoreConfig {
-  icon?: TemplateResult;
-  name?: string;
+export interface ProgressIndicatorConfig extends CoreConfig {
+  type: ProgressType;
 }
 
+export type ProgressType = "circular" | "linear";
+
 /**
- * Icon component
- * @element uxl-icon
+ * Progress indicator component
+ * @element uxl-progress-indicator
  *
  * @prop svg - Svg to render
  * @prop icon - icon name to use default icons
@@ -26,14 +26,14 @@ export interface IconConfig extends CoreConfig {
  * @cssprop --icon-size - Icon height and width
  * @cssprop --icon-color - Icon Color
  */
-@customElement("uxl-icon")
-export class UxlIcon extends LitElement {
+@customElement("uxl-progress-indicator")
+export class UxlProgressIndicator extends LitElement {
   /**
    * Properties
    */
 
   @property()
-  public svg: TemplateResult;
+  public type: ProgressType;
 
   @property()
   public icon: string;

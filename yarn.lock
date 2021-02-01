@@ -2212,6 +2212,18 @@
   dependencies:
     tslib "^1.9.3"
 
+"@material/circular-progress@=9.0.0-canary.1c156d69d.0":
+  version "9.0.0-canary.1c156d69d.0"
+  resolved "https://registry.yarnpkg.com/@material/circular-progress/-/circular-progress-9.0.0-canary.1c156d69d.0.tgz#df6a6b13cbe65e6e90e81ce0149d472a3de2463c"
+  integrity sha512-DCYOF9ssHb+psiKA98GZFztYFr48dvEhvS8w0Lu/hx+7G4qlG6KJzFZv1mBuiF0pdJCT1tjEDjOcj6t3nU9SRA==
+  dependencies:
+    "@material/animation" "9.0.0-canary.1c156d69d.0"
+    "@material/base" "9.0.0-canary.1c156d69d.0"
+    "@material/feature-targeting" "9.0.0-canary.1c156d69d.0"
+    "@material/progress-indicator" "9.0.0-canary.1c156d69d.0"
+    "@material/theme" "9.0.0-canary.1c156d69d.0"
+    tslib "^1.9.3"
+
 "@material/dom@9.0.0-canary.1c156d69d.0", "@material/dom@=9.0.0-canary.1c156d69d.0":
   version "9.0.0-canary.1c156d69d.0"
   resolved "https://registry.yarnpkg.com/@material/dom/-/dom-9.0.0-canary.1c156d69d.0.tgz#ffba86848f77cdce5ac2cfe494a97cb82af5c714"
@@ -2224,6 +2236,18 @@
   version "9.0.0-canary.1c156d69d.0"
   resolved "https://registry.yarnpkg.com/@material/feature-targeting/-/feature-targeting-9.0.0-canary.1c156d69d.0.tgz#feaf37af156811a088958e653e6c08e66f567d2a"
   integrity sha512-HWd0+GMnkVB3anmUc9+MeWCNoogAbb4U7ihzwq7lzLCQyC+i/kunppkUVV7DhL3ZVl1O6zIw1eAT+dgQpN8x4Q==
+
+"@material/linear-progress@=9.0.0-canary.1c156d69d.0":
+  version "9.0.0-canary.1c156d69d.0"
+  resolved "https://registry.yarnpkg.com/@material/linear-progress/-/linear-progress-9.0.0-canary.1c156d69d.0.tgz#51325bd7c474aa9a610a552b45bb1332530f065b"
+  integrity sha512-m5D5e2EwO14YzHEcC8mc5GU45FMXtjmpTQmZGyyNcy88Dyc/V5fBUAmPJvWNHrhyLdkA2K0xcOzTdVvJInPdTQ==
+  dependencies:
+    "@material/animation" "9.0.0-canary.1c156d69d.0"
+    "@material/base" "9.0.0-canary.1c156d69d.0"
+    "@material/feature-targeting" "9.0.0-canary.1c156d69d.0"
+    "@material/progress-indicator" "9.0.0-canary.1c156d69d.0"
+    "@material/theme" "9.0.0-canary.1c156d69d.0"
+    tslib "^1.9.3"
 
 "@material/mwc-base@^0.20.0":
   version "0.20.0"
@@ -2246,6 +2270,18 @@
     lit-html "^1.1.2"
     tslib "^2.0.1"
 
+"@material/mwc-circular-progress@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-circular-progress/-/mwc-circular-progress-0.20.0.tgz#db27d4862be4afa3b68f4d9bd06533171869ce37"
+  integrity sha512-6GyI97rZOGajjFB9L8R+44myv3YMo3zEHrlco5j1WnMPIPNHUcYww8EJgtkcl1E/q04Xpwvt6fFPv9X4vmLBnQ==
+  dependencies:
+    "@material/circular-progress" "=9.0.0-canary.1c156d69d.0"
+    "@material/mwc-base" "^0.20.0"
+    "@material/theme" "=9.0.0-canary.1c156d69d.0"
+    lit-element "^2.3.0"
+    lit-html "^1.1.2"
+    tslib "^2.0.1"
+
 "@material/mwc-icon-button@0.20.0":
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/@material/mwc-icon-button/-/mwc-icon-button-0.20.0.tgz#1a2d22f5d351b6a61f0dd41cb516a6fe21b6bcc5"
@@ -2263,6 +2299,18 @@
     lit-element "^2.3.0"
     tslib "^2.0.1"
 
+"@material/mwc-linear-progress@^0.20.0":
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/@material/mwc-linear-progress/-/mwc-linear-progress-0.20.0.tgz#d98adb09fe0d90ff5a56e9750236865b2a00dfaf"
+  integrity sha512-if8NPXsEpSeQwd1Od1BQUv0An3MthFneZE6uzikzMBT7D/tcLEGVgvR4oGxZ7xXOtm/mwwaRS84pLkxbWcBypQ==
+  dependencies:
+    "@material/linear-progress" "=9.0.0-canary.1c156d69d.0"
+    "@material/theme" "=9.0.0-canary.1c156d69d.0"
+    "@types/resize-observer-browser" "^0.1.3"
+    lit-element "^2.3.0"
+    lit-html "^1.1.2"
+    tslib "^2.0.1"
+
 "@material/mwc-ripple@^0.20.0":
   version "0.20.0"
   resolved "https://registry.yarnpkg.com/@material/mwc-ripple/-/mwc-ripple-0.20.0.tgz#ac83eda314b712c2fba293d2732f550dd1c6023b"
@@ -2274,6 +2322,13 @@
     lit-element "^2.3.0"
     lit-html "^1.1.2"
     tslib "^2.0.1"
+
+"@material/progress-indicator@9.0.0-canary.1c156d69d.0":
+  version "9.0.0-canary.1c156d69d.0"
+  resolved "https://registry.yarnpkg.com/@material/progress-indicator/-/progress-indicator-9.0.0-canary.1c156d69d.0.tgz#2a43d2c1442909874c5990b7ae893aced071a83d"
+  integrity sha512-56lYRqnUcI4L9a/LgfmzDTCKxxW1oOFqIVn3pMCP8hVGslhXY+yGl24qIp13MDW6FBgzx5rf66zB1rQltcSp/g==
+  dependencies:
+    tslib "^1.9.3"
 
 "@material/ripple@=9.0.0-canary.1c156d69d.0":
   version "9.0.0-canary.1c156d69d.0"
@@ -2287,7 +2342,7 @@
     "@material/theme" "9.0.0-canary.1c156d69d.0"
     tslib "^1.9.3"
 
-"@material/theme@9.0.0-canary.1c156d69d.0":
+"@material/theme@9.0.0-canary.1c156d69d.0", "@material/theme@=9.0.0-canary.1c156d69d.0":
   version "9.0.0-canary.1c156d69d.0"
   resolved "https://registry.yarnpkg.com/@material/theme/-/theme-9.0.0-canary.1c156d69d.0.tgz#2d733dea8f762cc8e35969915dfb3b7359147d1e"
   integrity sha512-r1610TPwUplt4FHMk7cR06Oz1jU/G31wBIh4Frs/YIB0ZonVlI5cZdIkG0IFtNt9ZYWoDwfP/1nQBxdqrDPPhg==
@@ -3430,6 +3485,11 @@
   integrity sha512-d2gQQ0IL6hXLnoRfVYZukQNWHuVsE75DzFTLPUuyyEhJS8G2VvlE+qfQQ91SJjaMqlURRCNIsX7Jcsw6cEuJlA==
   dependencies:
     "@types/react" "*"
+
+"@types/resize-observer-browser@^0.1.3":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@types/resize-observer-browser/-/resize-observer-browser-0.1.5.tgz#36d897708172ac2380cd486da7a3daf1161c1e23"
+  integrity sha512-8k/67Z95Goa6Lznuykxkfhq9YU3l1Qe6LNZmwde1u7802a3x8v44oq0j91DICclxatTr0rNnhXx7+VTIetSrSQ==
 
 "@types/source-list-map@*":
   version "0.1.2"
