@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.3](https://github.com/uxland/components/compare/@uxland/ui-icon@0.1.0-alpha.2...@uxland/ui-icon@0.1.0-alpha.3) (2021-02-01)
+
+
+### Bug Fixes
+
+* **ui-icon:** add host styles ([85f16af](https://github.com/uxland/components/commit/85f16af5f87a207fbb43aac8945eeb50f8e7a50b))
+
+
+
+
+
 # [0.1.0-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-icon@0.1.0-alpha.1...@uxland/ui-icon@0.1.0-alpha.2) (2021-02-01)
 
 
