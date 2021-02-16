@@ -23,3 +23,9 @@ CircularBusy.storyName = "Circular busy";
 CircularBusy.args = {
     type: 'circular'
 };
+
+export const BouncingBusy = Template.bind({});
+BouncingBusy.storyName = "Bouncing busy";
+BouncingBusy.args = {
+    type: 'bouncing'
+};

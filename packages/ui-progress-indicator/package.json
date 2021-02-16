@@ -40,9 +40,6 @@
     "url": "https://github.com/uxland/components/issues"
   },
   "dependencies": {
-    "@material/mwc-circular-progress": "^0.20.0",
-    "@material/mwc-linear-progress": "^0.20.0",
-    "@uxland/style-utilities": "^1.0.0-alpha.7",
     "@uxland/ui-core": "^0.0.1-alpha.3",
     "lit-element": "^2.4.0"
   }
