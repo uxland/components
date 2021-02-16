@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.1](https://github.com/uxland/components/compare/@uxland/ui-progress-indicator@0.1.0-alpha.0...@uxland/ui-progress-indicator@0.1.0-alpha.1) (2021-02-16)
+
+
+### Bug Fixes
+
+* added readme and some fixes ([9b518ab](https://github.com/uxland/components/commit/9b518ab125c97809e376f2908027d586dfb54373))
+
+
+
+
+
 # [0.1.0-alpha.0](https://github.com/uxland/components/compare/@uxland/ui-progress-indicator@0.0.1-alpha.0...@uxland/ui-progress-indicator@0.1.0-alpha.0) (2021-02-16)
 
 
