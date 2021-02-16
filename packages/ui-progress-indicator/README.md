@@ -1,12 +1,17 @@
 # UXL Progress Indicator Component [![npm version](https://badge.fury.io/js/%40uxland%2Fui-progress-indicator.svg)](https://badge.fury.io/js/%40uxland%2Fui-progress-indicator)
 
-| Build Status                                    | Statements                                    | Branches                                  | Functions                                   | Lines                               |
-| ----------------------------------------------- | --------------------------------------------- | ----------------------------------------- | ------------------------------------------- | ----------------------------------- |
-| ![BuildStatus](#buildstatus# 'Building Status') | ![Statements](#statements# 'Make me better!') | ![Branches](#branches# 'Make me better!') | ![Functions](#functions# 'Make me better!') | ![Lines](#lines# 'Make me better!') |
+> IMPORTANT: The Uxland UI Web Components are a work in progress and subject to
+> major changes until 1.0 release.
 
 ## Installation
 
-`npm i @uxland/ui-progress-indicator`
+```sh
+npm i @uxland/ui-progress-indicator
+```
+
+> NOTE: The Uxland UI Web Components are distributed by Uxland Company and are free to use
+> Modules, and use the Custom Elements API. They are compatible with all modern
+> browsers including Chrome, Firefox, Safari, Edge, and IE11.
 
 ## Usage
 
