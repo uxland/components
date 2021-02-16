@@ -8,11 +8,11 @@ export interface NotifyOptions<T = any> {
   htmlUrl?: string;
   containerId?: string;
   delay?: number;
-  showCloseButton?: boolean;
+  hideAction?: boolean;
   type?: NotifyType;
-  position?: NotifyPosition;
   styles?: NotifyStyles;
-  classifiers?: NofifyClassifiers;
+  leading?: boolean;
+  stacked?: boolean;
   model?: T;
 }
 
@@ -21,9 +21,7 @@ export interface NotifyStyles {
   textColor?: string;
   iconColor?: string;
 }
-export type NotifyPosition = "bottom" | "center" | "top";
 export type NotifyType = "danger" | "warning" | "info" | "success";
-export type NofifyClassifiers = "fit-bottom";
 
 export const notify = async (
   options: NotifyOptions,
@@ -34,7 +32,7 @@ export const notify = async (
     "message or htmlTag options properties are required"
   );
   //@ts-ignore
-  return new Promise<any>(async (resolve) => {
+  return new Promise<any>((resolve) => {
     const componentName = "notify-component";
 
     if (localizer && options.message)
@@ -43,7 +41,7 @@ export const notify = async (
         message: localizer(options.message, { ...options.messageArgs }),
       };
 
-    if (options.htmlTag && options.htmlUrl) await import(options.htmlUrl);
+    if (options.htmlTag && options.htmlUrl) import(options.htmlUrl);
 
     const component: any = document.body.appendChild(
       document.createElement(componentName)

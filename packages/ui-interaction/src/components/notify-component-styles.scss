@@ -1,6 +1,6 @@
-@import 'flex-layout-styles';
+// @import 'flex-layout-styles';
 
-:host {
+/* :host {
   @include layout;
   @include layout-center-center;
   flex: 1;
@@ -15,34 +15,20 @@ paper-toast {
   --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #323232);
   padding: var(--uxl-interaction-notify-padding, #{0px 0px 0px 24px});
   border-radius: 5px;
+} */
+
+#toast[type='danger'] {
+  background-color: #f44336;
 }
 
-paper-toast.fit-bottom {
-  border-radius: 0;
+#toast[type='warning'] {
+  background-color: #ff9800;
 }
 
-paper-toast[type='danger'] {
-  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #f44336);
+#toast[type='info'] {
+  background-color: #2196f3;
 }
 
-paper-toast[type='warning'] {
-  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #ff9800);
-}
-
-paper-toast[type='info'] {
-  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #2196f3);
-}
-
-paper-toast[type='success'] {
-  --paper-toast-background-color: var(--uxl-interaction-notify-background-color, #4caf50);
-}
-
-paper-toast[position='top'] {
-  position: absolute !important;
-  top: 0 !important;
-}
-
-paper-toast[position='center'] {
-  position: absolute !important;
-  left: auto !important;
+#toast[type='success'] {
+  background-color: #4caf50;
 }

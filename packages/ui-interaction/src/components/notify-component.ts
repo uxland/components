@@ -7,25 +7,24 @@ import {
   query,
   property,
 } from "lit-element";
-import "@material/mwc-icon-button/mwc-icon-button";
-import "@polymer/paper-toast/paper-toast.js";
+import "@material/mwc-icon-button";
+import "@material/mwc-snackbar";
+// import "@polymer/paper-toast/paper-toast.js";
 // import styles from "./notify-component-styles.scss";
 import { style as styles } from "./notify-component-styles-css";
-import { interactionIcons } from "../icons";
+// import { interactionIcons } from "../icons";
 import { NotifyOptions } from "../notify";
+import { nothing } from "lit-html";
+import { interactionIcons } from "../icons";
 
 const renderCloseButton = (props: NotifyComponent) =>
-  props.options.showCloseButton
+  !props.options.hideAction
     ? html`
-        <mwc-icon-button
-          @click="${props.closeToast}"
-          id="action-btn"
-          class="close-btn ${props.options.classifiers}"
+        <mwc-icon-button slot="dismiss"
+          >${interactionIcons.close}</mwc-icon-button
         >
-          ${interactionIcons.close}
-        </mwc-icon-button>
       `
-    : html``;
+    : nothing;
 
 const renderCustomContent = (props: NotifyComponent) => {
   if (props.options.htmlTag) {
@@ -40,18 +39,16 @@ const renderContent = (props: NotifyComponent) =>
   props.options.message ? renderCloseButton(props) : renderCustomContent(props);
 
 const renderToast = (props: NotifyComponent) => html`
-  <paper-toast
+  <mwc-snackbar
     id="toast"
-    part="toast"
-    class="${props.options.classifiers}"
-    position="${props.options.position}"
-    .duration="${props.options.delay}"
+    .timeoutMs="${props.options.delay}"
+    .stacked="${props.options.stacked}"
+    .leading="${props.options.leading || true}"
     type="${props.options.type}"
-    @iron-overlay-closed="${props.toastClosed}"
-    .text="${props.options.message || ""}"
+    .labelText="${props.options.message || ""}"
   >
     ${renderContent(props)}
-  </paper-toast>
+  </mwc-snackbar>
 `;
 
 const getOptionsStyles = (options: NotifyOptions) =>

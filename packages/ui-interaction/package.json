@@ -42,8 +42,9 @@
   "dependencies": {
     "@material/mwc-button": "0.20.0",
     "@material/mwc-icon-button": "0.20.0",
-    "@polymer/paper-dialog": "^3.0.1",
-    "@polymer/paper-toast": "^3.0.1",
+    "@material/mwc-dialog": "0.20.0",
+    "@material/mwc-snackbar": "0.20.0",
+    "@polymer/paper-dialog": "3.0.1",
     "@uxland/uxl-utilities": "^3.3.4",
     "@webcomponents/webcomponentsjs": "^2.4.4",
     "lit-element": "^2.4.0",
