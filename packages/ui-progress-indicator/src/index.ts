@@ -11,7 +11,8 @@ import { template } from "./template";
 import { CoreConfig } from "@uxland/ui-core";
 
 export interface ProgressIndicatorConfig extends CoreConfig {
-  type: ProgressType;
+  type?: ProgressType;
+  text?: string;
 }
 
 export type ProgressType = "circular" | "linear" | "bouncing";

@@ -9,7 +9,7 @@ export default {
 };
 
 const Template = (config: ProgressIndicatorConfig) => html`<div class="container">
-  <uxl-progress-indicator .type=${config.type}></uxl-progress-indicator>
+  <uxl-progress-indicator .type=${config.type} .text="${config.text}"></uxl-progress-indicator>
 </div>`;
 
 export const LinearBusy = Template.bind({});
@@ -17,6 +17,13 @@ LinearBusy.storyName = "Linear Busy";
 LinearBusy.args = {
     type: 'linear'
 } as ProgressIndicatorConfig;
+
+export const CircularTextBusy = Template.bind({});
+CircularTextBusy.storyName = "Circular text busy";
+CircularTextBusy.args = {
+  type: 'circular',
+  text: "I'm busy!"
+};
 
 export const CircularBusy = Template.bind({});
 CircularBusy.storyName = "Circular busy";
