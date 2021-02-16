@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.1.0-alpha.3](https://github.com/uxland/components/compare/@uxland/ui-progress-indicator@0.1.0-alpha.2...@uxland/ui-progress-indicator@0.1.0-alpha.3) (2021-02-16)
+
+
+### Bug Fixes
+
+* fixed readme ([ead6e23](https://github.com/uxland/components/commit/ead6e23fb692b09320ae72e11242b3b379f47494))
+* remove props arg on linear Template ([c36b107](https://github.com/uxland/components/commit/c36b1078d01cd70e2f79fd21ed1bd423ff6fe8a2))
+
+
+
+
+
 # [0.1.0-alpha.2](https://github.com/uxland/components/compare/@uxland/ui-progress-indicator@0.1.0-alpha.1...@uxland/ui-progress-indicator@0.1.0-alpha.2) (2021-02-16)
 
 
