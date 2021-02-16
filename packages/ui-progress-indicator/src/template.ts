@@ -8,7 +8,7 @@ const getBusyTemplate = (props: UxlProgressIndicator) => {
     case "circular":
       return circularTemplate(props);
     case "linear":
-      return linearTemplate(props);
+      return linearTemplate();
   }
 };
 
@@ -32,5 +32,5 @@ const circularTemplate = (props: UxlProgressIndicator) => html`
   </div>
 `;
 
-const linearTemplate = (props: UxlProgressIndicator) =>
+const linearTemplate = () =>
   html` <progress class="linear-progress"></progress> `;
