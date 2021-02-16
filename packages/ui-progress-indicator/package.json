@@ -13,7 +13,8 @@
     "es",
     "dist",
     "README.md",
-    "package.json"
+    "package.json",
+    "images"
   ],
   "publishConfig": {
     "access": "public",
