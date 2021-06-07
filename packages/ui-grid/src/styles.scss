@@ -104,7 +104,8 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
     }
 
     .content__cell {
-      padding: 16px 0;
+      padding-top: 16px;
+      padding-bottom: 16px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
