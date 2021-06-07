@@ -3,6 +3,25 @@
 :host {
   min-height: 1px;
   height: 100%;
+
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent !important;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background: var(--paper-grey-400) !important;
+    border-radius: 4px;
+  }
+
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--paper-grey-400) !important;
+    border-radius: 4px;
+  }
 }
 
 $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
@@ -28,15 +47,20 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
   }
 
   .header__cell {
+    display: flex;
     padding: 16px 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    mwc-icon {
-      fill: var(--uxl-grid-order-icon-color);
-      width: var(--uxl-grid-order-icon-width);
-      height: var(--uxl-grid-order-icon-height);
+    .icon {
+      padding-left: var(--uxl-grid-order-separator, .5rem) !important;
+
+      svg {
+        fill: var(--uxl-grid-order-icon-color, blue);
+        width: var(--uxl-grid-order-icon-size, 14px) !important;
+        height: var(--uxl-grid-order-icon-size, 14px) !important;
+      }
     }
   }
 }
@@ -56,6 +80,7 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
       display: flex;
     }
   }
+
   .content__row {
     @include format-grid;
     border-bottom: 1px solid grey;
@@ -67,14 +92,15 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
         display: none;
       }
     }
+
     &:hover:not(.disabled) {
-      background-color: var(--uxl-grid-row-hover-color);
+      background-color: var(--uxl-grid-row-hover-color, var(--paper-grey-100));
       cursor: pointer;
     }
 
     &.disabled {
-      color: var(--uxl-grid-row-disabled-color);
-      background-color: var(--uxl-grid-row-disabled-background-color);
+      color: var(--uxl-grid-row-disabled-color, var(--paper-grey-400));
+      background-color: var(--uxl-grid-row-disabled-background-color, var(--paper-grey-50));
     }
 
     .content__cell {
@@ -89,7 +115,9 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
     }
   }
 }
+
 lit-virtualizer {
   min-height: 1px;
   height: 100%;
+  overflow: var(--uxl-grid-overflow, overlay);
 }
