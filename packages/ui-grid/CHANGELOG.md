@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.1-alpha.12](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.11...@uxland/ui-grid@0.0.1-alpha.12) (2021-06-07)
+
+
+### Bug Fixes
+
+* **ui-grid:** icons ([f430a61](https://github.com/uxland/components/commit/f430a61c954535dad64c725d4dd37c5d996e55ef))
+
+
+
+
+
 ## [0.0.1-alpha.11](https://github.com/uxland/components/compare/@uxland/ui-grid@0.0.1-alpha.10...@uxland/ui-grid@0.0.1-alpha.11) (2021-06-07)
 
 **Note:** Version bump only for package @uxland/ui-grid
