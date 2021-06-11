@@ -53,6 +53,12 @@ $min-grid: calc((var(--grid-width) - 32px) / var(--number-columns));
     overflow: hidden;
     text-overflow: ellipsis;
 
+    .header__name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
     .icon {
       padding-left: var(--uxl-grid-order-separator, .5rem) !important;
 
