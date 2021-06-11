@@ -61,7 +61,7 @@ export const template = (props: UxlGrid) => html`
 													part="header__cell header__cell-${index + 1}"
 													@click="${props.onClickHeaderCell}"
 											>
-												<div class="name">${column.displayName || ""}</div>
+												<div class="header__name" part="header__name header__name-${index + 1}">${column.displayName || ""}</div>
 												${column.order == "ASC"
 														? html`
 															<div class="icon">${icons.arrowUp}</div>
